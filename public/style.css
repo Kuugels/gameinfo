@@ -1,0 +1,33 @@
+html, body {
+  font-family: 'Russo One', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.page-header {
+  position: absolute;
+  z-index: 1;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.row {
+  text-align: center;
+  height: 100%;
+}
+
+.col-sm-3 {
+  background-color: lightblue;
+  transition-duration: 1s;
+}
+
+.col-sm-3:hover {
+  background-color: white;
+  width:30%;
+  transition-duration: 1s;
+}

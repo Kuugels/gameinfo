@@ -1,0 +1,36 @@
+{
+  "games": [
+    {
+    "id": 1,
+    "name": "Overwatch",
+    "summary": "Overwatch is a team-based multiplayer online first-person shooter video game developed and published by Blizzard Entertainment.",
+    "trailer": "https://youtu.be/FqnKB22pOC0",
+    "site": "https://playoverwatch.com",
+    "image": "ow.jpg"
+    },
+    {
+    "id": 2,
+    "name": "DayZ",
+    "summary": "DayZ is an open world survival video game currently in development by Bohemia Interactive.",
+    "trailer": "https://youtu.be/3ss1dckHhfI",
+    "site": "https://www.dayz.com/",
+    "image": "dz.jpg"
+    },
+    {
+    "id": 3,
+    "name": "Playerunknowns Battlegrounds",
+    "summary": "PlayerUnknown's Battlegrounds is a multiplayer online battle royale game developed and published by PUBG Corporation",
+    "trailer": "https://youtu.be/ODWCbu_cuqk",
+    "site": "https://www.playbattlegrounds.com",
+    "image": "bg.jpg"
+    },
+    {
+    "id": 4,
+    "name": "Doom",
+    "summary": "Doom is a first-person shooter video game developed by id Software and published by Bethesda Softworks.",
+    "trailer": "https://youtu.be/RO90omga8D4",
+    "site": "https://doom.com/",
+    "image": "dm.jpg"
+    }
+  ]
+}
