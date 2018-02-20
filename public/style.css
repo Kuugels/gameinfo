@@ -5,9 +5,11 @@ html, body {
 }
 
 .page-header {
+  background-color: black;
+  color: white;
   position: absolute;
   z-index: 1;
-  height: 30px;
+  height: auto;
   width: 100%;
   text-align: center;
 }
@@ -19,15 +21,28 @@ html, body {
 .row {
   text-align: center;
   height: 100%;
+  transition-duration: 1s;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.col-sm-3 {
-  background-color: lightblue;
+.col-sm-3, .col-sm-2 {
   transition-duration: 1s;
+  -webkit-filter: grayscale(1) blur(2px);
+  filter: grayscale(1) blur(2px);
 }
 
-.col-sm-3:hover {
-  background-color: white;
-  width:30%;
+.col-sm-6 {
+  background-repeat: no-repeat;
+  background-size: cover;
   transition-duration: 1s;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.col-sm-3:hover, .col-sm-2:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
