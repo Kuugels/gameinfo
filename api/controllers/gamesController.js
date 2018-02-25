@@ -4,21 +4,25 @@ var mongoose = require('mongoose'),
   Game = mongoose.model('Games');
 
 exports.list_all_games = function(req, res) {
-  Game.find({}, function(err, task) {
+  Game.find({}, function(err, game) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(game[0]);
   });
 };
 
 exports.read_a_game = function(req, res) {
-  Game.findById(req.params.gameId, function(err, task) {
-    if (err)
+  Game.find({}, function(err, game) {
+    if (err) {
       res.send(err);
-    res.json(task);
+    }
+    for (var i = 0; i < game[0].games.length; i++) {
+      if(game[0].games[i].name.toLowerCase() == req.params.gameName) {
+        res.json(game[0].games[i]);
+      }
+    }
   });
 };
-
 /*
 exports.create_a_task = function(req, res) {
   var new_task = new Task(req.body);

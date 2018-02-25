@@ -11,6 +11,12 @@ mongoose.connect('mongodb://palikka:SuperPalikka123@ds243418.mlab.com:43418/game
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 var routes = require('./api/routes/gamesRoutes'); //importing route
 routes(app); //register the route
 

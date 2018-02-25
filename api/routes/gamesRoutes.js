@@ -8,7 +8,7 @@ module.exports = function(app) {
     //.post(todoList.create_a_task);
 
 
-  app.route('/games/:gameId')
+  app.route('/games/:gameName')
     .get(gamesList.read_a_game);
     //.put(todoList.update_a_task)
     //.delete(todoList.delete_a_task);
