@@ -41,7 +41,6 @@ function expandHandler() {
 // Creates handler to minimize expanded columns
 function minimizeHandler() {
   $(".col-sm-6").click(function() {
-    console.log("min");
     $(this)
         .removeClass("col-sm-6")
         .addClass("col-sm-3").click(expandHandler())
