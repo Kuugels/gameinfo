@@ -5,6 +5,7 @@ $(document).ready(function() {
   getData();
 });
 
+// Retrieves data from database
 function getData() {
   $.getJSON('/games', function (data) {
     games.push(data.games);
@@ -13,8 +14,8 @@ function getData() {
   });
 }
 
+// Creates column for every 'game' in database
 function createColumns() {
-  console.log(games[0][0].name);
   var col = "";
   for (var i = 0; i < games[0].length; i++) {
     col += "<div class='col-sm-3' id='col" + games[0][i].id + "'>" + createInfo(games[0][i]) + "</div>";
@@ -25,6 +26,7 @@ function createColumns() {
   }
 }
 
+// Creates handler to expand default columns
 function expandHandler() {
   $(".col-sm-3").click(function() {
     $(this)
@@ -36,6 +38,7 @@ function expandHandler() {
   });
 }
 
+// Creates handler to minimize expanded columns
 function minimizeHandler() {
   $(".col-sm-6").click(function() {
     console.log("min");
@@ -48,6 +51,7 @@ function minimizeHandler() {
     });
 }
 
+// Creates list containing basic info about games
 function createInfo(game) {
   var info = '<ul class="list-group">'+
     '<li class="list-group-flush"><h1>' + game.name + '</h1></li>'+
